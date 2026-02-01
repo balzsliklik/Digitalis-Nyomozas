@@ -22,5 +22,10 @@ namespace Digitalis_Nyomozas
 		public string VallomasSzovege { get => vallomasSzovege; set => vallomasSzovege = value; }
 		public DateTime VallomasDatuma { get => vallomasDatuma; set => vallomasDatuma = value; }
 		internal Person Person { get => person; set => person = value; }
-	}
+
+        public override string ToString()
+        {
+            return $"{person.Nev} vallomása ({vallomasDatuma.ToShortDateString()}): {vallomasSzovege}";
+        }
+    }
 }

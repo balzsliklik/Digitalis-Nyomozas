@@ -23,6 +23,11 @@ namespace Digitalis_Nyomozas
 		public string Nev { get => nev; set => nev = value; }
 		public int Eletkor { get => eletkor; set => eletkor = value; }
 		public string Megjedzes { get => megjedzes; set => megjedzes = value; }
-	
-	}
+
+        public override string ToString()
+        {
+            return $"{nev}, {eletkor} éves - {megjedzes}";
+        }
+
+    }
 }

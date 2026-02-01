@@ -19,5 +19,10 @@ namespace Digitalis_Nyomozas
 			this.datum = datum;
 			this.esemenyLeiras = esemenyLeiras;
 		}
-	}
+
+        public override string ToString()
+        {
+            return $"{datum.ToShortDateString()}: {esemenyLeiras}";
+        }
+    }
 }

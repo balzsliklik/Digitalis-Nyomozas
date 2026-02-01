@@ -11,9 +11,23 @@ namespace Digitalis_Nyomozas
 		private string aktualisStatusz;
 
 		public Case_status(string aktualisStatusz) { 
-		this.aktualisStatusz = aktualisStatusz;
+			this.aktualisStatusz = aktualisStatusz;
+		}
+        public Case_status()
+        {
+            this.aktualisStatusz = "aktív";
+        }
+
+        public string AktualisStatusz { get => aktualisStatusz; set => aktualisStatusz = value; }
+
+		public void ChangeStats(string newStatus)
+		{
+			aktualisStatusz = newStatus;
 		}
 
-		public string AktualisStatusz { get => aktualisStatusz; set => aktualisStatusz = value; }
-	}
+        public override string ToString()
+        {
+			return aktualisStatusz;
+        }
+    }
 }
