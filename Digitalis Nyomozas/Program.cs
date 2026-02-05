@@ -33,6 +33,8 @@ namespace Digitalis_Nyomozas
                     if (input == 1)
                     {
                         caseManager.ListCase();
+                        Console.WriteLine("\n Folalyatatás [ENTER]");
+                        fut = false;
                     }
                     else if (input == 2)
                     {
@@ -48,6 +50,7 @@ namespace Digitalis_Nyomozas
 
                         Console.WriteLine("ugy hozzáadva.\n folytatás [ENTER]");
                         Console.ReadLine();
+                        fut = false;
                     }
                     else if (input == 3)
                     {
@@ -73,6 +76,59 @@ namespace Digitalis_Nyomozas
 
             caseManager.AddPersonToCase(id, new Person(nev, eletkor, megjedzes));
             Console.WriteLine("\nszemély hozzáadva.\n\nFolyataás [ENTER]");
+        }
+        static void bizonyitek() 
+        {
+            bool fut = true;
+            while (fut)
+            {
+				Console.WriteLine("""
+                1. Bizoníték listázása
+                2. Bizonyíték hozzaadása
+                3. Bizonyíték törlése
+                4. Vissza
+                """);
+				int input = Convert.ToInt32(Console.ReadLine());
+				
+                if (input < 1 || input > 3)
+                {
+                    Console.WriteLine("hibás input");
+                }
+                else
+                {
+                    if(input == 1)
+                    {
+                        Console.WriteLine(evidenceManager.ListEvidence());
+                        Console.WriteLine("\nFolytatás [ENTER]");
+                        Console.ReadLine();
+                        fut = false;
+                    }else if (input == 2)
+                    {
+                        Console.Write("add meg az azonosítot: ");
+                        int azonosito = Convert.ToInt32(Console.ReadLine());
+                        Console.Write("add meg a típust(fotó, dokumentum, digitális adat): ");
+                        string tipus = Console.ReadLine();
+                        Console.Write("add meg a leírást: ");
+                        string leiras = Console.ReadLine();
+                        Console.Write("add meg a megbízhatósagi értéket(1-5): ");
+                        int megbizhatosag = Convert.ToInt32(Console.ReadLine());
+
+
+                        evidenceManager.AddEvidence(new Evidence(azonosito, tipus, leiras, megbizhatosag));
+
+
+                    }else if (input == 3)
+                    {
+                        int index = 0;
+                        foreach (Evidence i in evidenceManager.ListEvidence())
+                        {
+                            index++;
+                            Console.WriteLine(index+" "+i);
+                        }
+                    }
+                }
+			}
+            
         }
         static void Main(string[] args)
         {
@@ -112,7 +168,7 @@ namespace Digitalis_Nyomozas
                         }
                         else if (input == 2)
                         {
-
+                        szemelyhozzaad();
 
                         }
                         else if (input == 3)
