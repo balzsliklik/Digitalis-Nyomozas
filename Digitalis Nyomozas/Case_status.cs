@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Digitalis_Nyomozas
 {
-	internal class Case_status
+	internal class Case_status //nyitott / folyamatban / lezárt
 	{
 		private string aktualisStatusz;
 

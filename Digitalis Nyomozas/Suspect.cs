@@ -15,7 +15,7 @@ namespace Digitalis_Nyomozas
 		public Suspect(Person person, int gyanusitottSzint, string statusz) { 
 			this.person = person;
 			this.gyanusitottSzint = gyanusitottSzint;
-			this.statusz = statusz;
+			this.statusz = statusz; //szabad / megfigyelt / őrizetben
 		}
 
 		public int GyanusitottSzint { get => gyanusitottSzint; set => gyanusitottSzint = value; }

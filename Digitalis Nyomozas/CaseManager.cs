@@ -34,6 +34,10 @@ namespace Digitalis_Nyomozas
             if (c != null)
                 c.AddEvidence(e);
         }
+		public List<Case> ListCase()
+		{
+			return ugyek;
+		}
 
 
     }

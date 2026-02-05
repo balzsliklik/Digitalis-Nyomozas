@@ -9,8 +9,8 @@ namespace Digitalis_Nyomozas
         private int azonosito;
         private string cim;
         private string leiras;
-        private Case_status status;
-        private List<Person> szemelyek;
+        private Case_status status; //nyitott / folyamatban / lezárt
+		private List<Person> szemelyek;
         private List<Evidence> bizonyitekok;
         private List<Case> kapcsolodoUgyek;
         private List<TimelineEvent> idovonal;

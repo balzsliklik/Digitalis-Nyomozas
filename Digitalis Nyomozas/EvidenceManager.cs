@@ -30,5 +30,7 @@ namespace Digitalis_Nyomozas
 		{
 			return bizonyitekok;
 		}
+
+		
     }
 }

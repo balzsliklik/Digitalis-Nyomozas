@@ -16,9 +16,9 @@ namespace Digitalis_Nyomozas
 		public Evidence(int azonosito, string tipus, string leiras, int megbizhatosagiErtek)
 		{
 			this.azonosito = azonosito;
-			this.tipus = tipus;
+			this.tipus = tipus;  //(fotó, dokumentum, digitális adat
 			this.leiras = leiras;
-			this.megbizhatosagiErtek = megbizhatosagiErtek;
+			this.megbizhatosagiErtek = megbizhatosagiErtek; //1-5
 		}
 
 		public int Azonosito { get => azonosito; set => azonosito = value; }
